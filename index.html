@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Colaço Ar-Condicionado em Paranaguá - venda, instalação, manutenção e limpeza de ar-condicionado. Fale com Eduardo pelo WhatsApp.">
+  <title>Colaço Ar-Condicionado | Paranaguá - PR</title>
+  <style>
+    :root{
+      --blue:#0797ff; --cyan:#16d8ff; --deep:#03101f; --navy:#071a30;
+      --white:#f7fbff; --muted:#b8c9d9; --card:#0b2139;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--deep);color:var(--white);line-height:1.5}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(3,16,31,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(22,216,255,.15)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-size:27px;font-weight:900;letter-spacing:2px}
+    .brand span{color:var(--cyan)}
+    nav{display:flex;gap:25px;color:#d8e7f5;font-size:14px;font-weight:700}
+    nav a:hover{color:var(--cyan)}
+    .menu{display:none;background:none;border:0;color:white;font-size:28px}
+    .hero{min-height:650px;display:flex;align-items:center;position:relative;overflow:hidden;background:
+      radial-gradient(circle at 75% 25%,rgba(0,166,255,.25),transparent 35%),
+      linear-gradient(135deg,#020912 0%,#061b33 55%,#03101f 100%)}
+    .hero:after{content:"";position:absolute;inset:auto -10% -180px;height:380px;background:linear-gradient(180deg,transparent,rgba(0,145,255,.12));transform:skewY(-5deg)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;position:relative;z-index:2}
+    .eyebrow{color:var(--cyan);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:14px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:.98;letter-spacing:-2px;margin-bottom:22px}
+    h1 span{color:var(--cyan)}
+    .hero p{font-size:18px;color:var(--muted);max-width:580px;margin-bottom:30px}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 23px;border-radius:10px;font-weight:800;border:1px solid transparent;transition:.2s}
+    .btn-primary{background:linear-gradient(135deg,var(--blue),#0064e8);box-shadow:0 10px 30px rgba(0,145,255,.25)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-outline{border-color:rgba(22,216,255,.5);color:var(--cyan)}
+    .hero-card{border:1px solid rgba(22,216,255,.25);background:rgba(7,26,48,.72);padding:18px;border-radius:22px;box-shadow:0 20px 70px rgba(0,0,0,.35)}
+    .hero-card img{width:100%;display:block;border-radius:14px}
+    section{padding:88px 0}
+    .section-head{text-align:center;margin-bottom:45px}
+    .section-head h2{font-size:38px;margin-bottom:10px}
+    .section-head p{color:var(--muted);max-width:650px;margin:auto}
+    .services{background:#061526}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,#0b2743,#071b2f);border:1px solid rgba(22,216,255,.12);padding:27px;border-radius:16px;transition:.2s}
+    .card:hover{transform:translateY(-5px);border-color:rgba(22,216,255,.4)}
+    .icon{font-size:34px;margin-bottom:15px}
+    .card h3{margin-bottom:8px;font-size:20px}
+    .card p{color:var(--muted);font-size:14px}
+    .sales{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+    .sales-box{background:linear-gradient(135deg,#092746,#061525);padding:38px;border-radius:22px;border:1px solid rgba(22,216,255,.16)}
+    .sales-box h2{font-size:38px;margin-bottom:15px}
+    .sales-box p{color:var(--muted);margin-bottom:22px}
+    .checks{display:grid;gap:12px;margin-bottom:25px}
+    .checks div{display:flex;gap:10px;align-items:center;font-weight:700}
+    .checks b{color:var(--cyan)}
+    .product-visual{min-height:380px;border-radius:22px;overflow:hidden;background:#000}
+    .product-visual img{width:100%;height:100%;object-fit:cover}
+    .why{background:#061526}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .stat{padding:30px;text-align:center;border-radius:16px;background:#0a2036}
+    .stat strong{font-size:30px;color:var(--cyan);display:block;margin-bottom:6px}
+    .stat span{color:var(--muted)}
+    .contact{background:linear-gradient(135deg,#03101f,#06233d)}
+    .contact-box{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+    .contact h2{font-size:40px;margin-bottom:12px}
+    .contact p{color:var(--muted);margin-bottom:22px}
+    .contact-info{display:grid;gap:14px}
+    .info{padding:18px;background:rgba(255,255,255,.04);border:1px solid rgba(22,216,255,.13);border-radius:12px}
+    .info small{display:block;color:var(--muted);margin-bottom:4px}
+    .info strong{font-size:20px}
+    footer{padding:30px 0;background:#020a13;color:#91a7bb;text-align:center;font-size:13px}
+    .floating{position:fixed;right:18px;bottom:18px;z-index:60;background:#20c45a;color:white;border-radius:50px;padding:14px 20px;font-weight:900;box-shadow:0 12px 35px rgba(0,0,0,.35)}
+    @media(max-width:850px){
+      nav{display:none}.menu{display:block}
+      .hero{min-height:auto;padding:75px 0}
+      .hero-grid,.sales,.contact-box{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .stats{grid-template-columns:1fr}
+      .hero-card{order:-1}
+    }
+    @media(max-width:520px){
+      .grid{grid-template-columns:1fr}
+      section{padding:65px 0}
+      .hero p{font-size:16px}
+      .floating{left:15px;right:15px;text-align:center}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">COLA<span>ÇO</span></a>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#venda">Venda de Ar</a>
+      <a href="#empresa">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="menu" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Ar-condicionado em Paranaguá - PR</div>
+        <h1>Conforto em <span>todos os ambientes.</span></h1>
+        <p>Venda, instalação, manutenção e limpeza de ar-condicionado. Atendimento profissional para residências, comércios e empresas.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="https://wa.me/5541984896015?text=Olá%20Eduardo!%20Gostaria%20de%20um%20orçamento." target="_blank">Falar com Eduardo</a>
+          <a class="btn btn-outline" href="#servicos">Conhecer serviços</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="banner-colaco.png" alt="Colaço Ar-Condicionado">
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="servicos">
+    <div class="container">
+      <div class="section-head">
+        <h2>Nossos serviços</h2>
+        <p>Soluções completas para manter seu ambiente confortável, eficiente e bem cuidado.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="icon">🔧</div><h3>Manutenção</h3><p>Manutenção preventiva e corretiva para melhorar o desempenho e a durabilidade do aparelho.</p></article>
+        <article class="card"><div class="icon">❄️</div><h3>Instalação</h3><p>Instalação de ar-condicionado com atenção aos detalhes e segurança.</p></article>
+        <article class="card"><div class="icon">✨</div><h3>Limpeza</h3><p>Higienização para ajudar a manter o aparelho limpo e funcionando adequadamente.</p></article>
+        <article class="card"><div class="icon">🛒</div><h3>Venda de Ar</h3><p>Encontre o aparelho adequado para seu ambiente. Consulte modelos e disponibilidade.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="venda">
+    <div class="container sales">
+      <div class="sales-box">
+        <div class="eyebrow">Venda de ar-condicionado</div>
+        <h2>Escolha o aparelho certo para seu ambiente.</h2>
+        <p>Trabalhamos com diferentes tipos e capacidades. Fale com o Eduardo para consultar modelos, marcas, BTUs e disponibilidade.</p>
+        <div class="checks">
+          <div><b>✓</b> Modelos Split e Inverter</div>
+          <div><b>✓</b> Diferentes capacidades de BTUs</div>
+          <div><b>✓</b> Orientação para escolher o aparelho</div>
+          <div><b>✓</b> Venda + instalação</div>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/5541984896015?text=Olá%20Eduardo!%20Quero%20consultar%20os%20ar-condicionados%20disponíveis." target="_blank">Consultar aparelhos</a>
+      </div>
+      <div class="product-visual">
+        <img src="banner-colaco.png" alt="Produtos e serviços Colaço Ar-Condicionado">
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="empresa">
+    <div class="container">
+      <div class="section-head">
+        <h2>Por que a Colaço?</h2>
+        <p>Atendimento local em Paranaguá, com foco em serviço bem feito e atendimento direto.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>4 em 1</strong><span>Venda, instalação, manutenção e limpeza</span></div>
+        <div class="stat"><strong>Paranaguá</strong><span>Atendimento local e região</span></div>
+        <div class="stat"><strong>Direto</strong><span>Fale diretamente com Eduardo</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="container contact-box">
+      <div>
+        <div class="eyebrow">Faça seu orçamento</div>
+        <h2>Seu conforto começa aqui.</h2>
+        <p>Chame no WhatsApp e conte o que você precisa. A Colaço pode ajudar com venda, instalação, manutenção ou limpeza.</p>
+        <a class="btn btn-primary" href="https://wa.me/5541984896015?text=Olá%20Eduardo!%20Vim%20pelo%20site%20da%20Colaço%20e%20gostaria%20de%20um%20orçamento." target="_blank">WhatsApp — 41 98489-6015</a>
+      </div>
+      <div class="contact-info">
+        <div class="info"><small>Atendimento</small><strong>Eduardo</strong></div>
+        <div class="info"><small>WhatsApp</small><strong>(41) 8489-6015</strong></div>
+        <div class="info"><small>Localização</small><strong>Paranaguá - PR</strong></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a class="floating" href="https://wa.me/5541984896015?text=Olá%20Eduardo!%20Gostaria%20de%20um%20orçamento." target="_blank">💬 Falar no WhatsApp</a>
+
+<footer>
+  © 2026 Colaço Ar-Condicionado · Paranaguá - PR
+</footer>
+</body>
+</html>
